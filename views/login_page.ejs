@@ -9,8 +9,11 @@
   <h1>Enter Email</h1>
   <br>
   <br>
-  <form action="/" method="post">
-    <input type="email" placeholder="email" name="landemail">
+  <form action="/login" method="post">
+    <input type="email" placeholder="email" name="landemail" value="<%= email%>">
+    <br>
+    <br>
+    <input type="password", placeholder="password", name="passowrd">
     <br>
     <br>
     <input type="submit" value="Get Started">

@@ -7,6 +7,7 @@ var session = require("express-session");
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+const passport = require("passport");
 
 var app = express();
 
@@ -21,8 +22,8 @@ app.use(session({
 }));
 app.use(passport.initialize());
 app.use(passport.session());
-passport.serializeuser(usersRouter.serializeUser());
-passport.deserializeuser(usersRouter.deserializeUser());
+passport.serializeUser(usersRouter.serializeUser());
+passport.deserializeUser(usersRouter.deserializeUser());
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));

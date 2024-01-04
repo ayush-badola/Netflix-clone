@@ -2,11 +2,10 @@ var express = require('express');
 var router = express.Router();
 const mongoose = require("mongoose");
 const plm = require("passport-local-mongoose");
-
 mongoose.connect("mongodb://127.0.0.1:27017/netcdata");
 
 
-const user_schema = mongoose.schema ({
+const user_schema = mongoose.Schema ({
   name: String,
   username: String,
   email : String,
@@ -15,6 +14,5 @@ const user_schema = mongoose.schema ({
   profile: String
 })
 
-user_schema.plugin(plm);
-module.exports = router;
+user_schema.plugin(plm, {usernameField: "email"});
 module.exports = mongoose.model("user",user_schema);
