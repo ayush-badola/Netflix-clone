@@ -23,7 +23,6 @@ router.post('/', async function(req, res, next) {
   {
     res.redirect(`/register?email=${encodeURIComponent(email)}`);
   }
-  res.render("index");
   }
 else{
   console.log("Else block before render");
@@ -40,12 +39,15 @@ router.get("/login", function(req, res, next){
 router.post("/login", passport.authenticate("local", {
   successRedirect: "/profile",
   failureRedirect: "/login"
-}),function(req, res) { });
+}),function(req, res, next) { });
+
+
 router.get("/register", function(req, res, next) {
   const emailValue = req.query.email;
   res.render("register_page", {email: emailValue || ""});
   
 });
+
 
 router.post("/register", function(req, res, next) {
   const emailValue = req.query.email;
@@ -53,14 +55,16 @@ router.post("/register", function(req, res, next) {
     name: req.body.name,
     username: req.body.username,
     number: req.body.mobile,
-    email: emailValue
+    email: req.body.email
   });
   userModel.register(userdata, req.body.password)
-.then(function() {
-  passport.authenticate("local")(req, res, function () {
+.then(function(registereduser) {
+
+  //passport.authenticate("local")(req, res, function() {
     res.redirect("/profile");
-  })
-})
+  //});
+
+});
 
 });
 
