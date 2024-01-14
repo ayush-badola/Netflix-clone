@@ -15,5 +15,5 @@ This is a project to clone the Netflix website on the local server of MongoDB vi
 	* name : Ayush Badola
   		* email : glitchy.56@outlook.com
   		* instagram-username : @_ayush_ig
-  		* twitter-username : _ayush_twt
-  		* linkedin-sername : ayushbadola
+  		* twitter-username : @_ayush_twt
+  		* linkedin-username : @ayushbadola
