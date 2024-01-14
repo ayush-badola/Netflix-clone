@@ -3,20 +3,43 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheets/loginstyle.css">
   <title>Netflix-Clone</title>
 </head>
 <body>
-  <h1>Enter Email</h1>
-  <br>
-  <br>
-  <form action="/login" method="post">
-    <input type="email" placeholder="email" name="landemail" value="<%= email%>">
-    <br>
-    <br>
-    <input type="password", placeholder="password", name="passowrd">
-    <br>
-    <br>
-    <input type="submit" value="Get Started">
-  </form>
+  <div class="centre">
+    <h3>Sign In</h3>
+    <form action="/login" method="post" class="cred">
+      <input type="email" placeholder="email" name="landemail" value="<%= email%>" class="emai">
+      <br>
+      <br>
+      <input type="password" placeholder="password" name="password" class="pass">
+      <br>
+      <br>
+      <br>
+      <input type="submit" value="Sign In" class="sub">
+      <br>
+      <br>
+      <br>
+      <br>
+      <h4>New to Netflix?   <a href="/register" class="reg">Sign Up!</a></h4>
+      <h4>This is a clone website to the Original Netflix website, made as a personal project.</h4>
+      <a href="https://www.netflix.com/in/" class="ori">Visit the Original Netflix website</a>
+      
+    </form>
+  </div>
+  <div class="footer">
+    <h2>Questions? Call 9625316729</h2>
+    <div class="link">
+      <ul class="links">
+          <li><a href="">FAQ</a></li>
+          <li><a href="">Help Centre</a></li>
+          <li><a href="">Terms of Use</a></li>
+          <li><a href="">Cookie Preferences</a></li>
+          <li><a href="">Privacy</a></li>
+          <li><a href="">Corporate Information</a></li>
+      </ul>
+  </div>
+  </div>
 </body>
 </html>

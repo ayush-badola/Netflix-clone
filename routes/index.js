@@ -39,7 +39,10 @@ router.get("/login", function(req, res, next){
 router.post("/login", passport.authenticate("local", {
   successRedirect: "/profile",
   failureRedirect: "/login"
-}),function(req, res, next) { });
+})//,function(req, res, next) {
+  //console.log("Inside login function");
+  //res.redirect("/profile");
+ );
 
 
 router.get("/register", function(req, res, next) {
@@ -59,10 +62,7 @@ router.post("/register", function(req, res, next) {
   });
   userModel.register(userdata, req.body.password)
 .then(function(registereduser) {
-
-  //passport.authenticate("local")(req, res, function() {
     res.redirect("/profile");
-  //});
 
 });
 

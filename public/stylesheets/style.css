@@ -1,8 +1,406 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+.header{
+  text-align: right;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.header li{
+  display: inline-block;
+  list-style-type: none;
+  border-style: none;
+}
+.left{
+  float: left;
+  font-family: 'Poppins', sans-serif;
+  font-size: 180%;
+  color: rgb(255, 30, 30);
+  margin-top: 0%;
+  margin-bottom: 0%;
+}
+.sign{
+  margin: 5px;
+}
+.sign a{
+  font-family: 'Dancing Script', cursive;
+  font-family: 'Montserrat', sans-serif;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  padding: 10px;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-radius: 9%;
+  background-color: red;
+  color: white;
+  text-decoration: solid;
+}
+.drop select{
+  border-color: white;
+  border-width: 1px;
+  color: white;
+  border-radius: 9%;
+  padding: 7px;
+  padding-left: 18px;
+  padding-right: 18px;
+  font-size: 15px;
+  font-weight: 600;
+  background-color: rgba(240, 248, 255, 0.066);
+}
+.right{
+  margin-top: 2%;
+}
+body{
+  background-image: url(/images/net1.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  margin: 0%;
+  padding: 0%;
 }
 
-a {
-  color: #00B7FF;
+.regus{
+  display: flex;
+}
+
+.fc{
+  margin-top: 14%;
+  text-align: center;
+  color: white;
+}
+.fc h1{
+  font-family: 'Bebas Neue', sans-serif;
+  margin: 0%;
+  font-size: 53px;
+}
+.fc h3{
+  font-family: 'Ysabeau Infant', sans-serif;
+  margin: 2%;
+  font-size: 25px;
+  font-weight: 90;
+}
+.fc h4{
+  font-family: 'Ysabeau Infant', sans-serif;
+  margin: 0%;
+  font-weight: 90;
+  font-size: 20px;
+}
+.emai{
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.emai-input{
+  padding-left: 2vh;
+  width: 430px;
+  height: 55px;
+  border-style: solid;
+  border-color: white;
+  color: rgb(255, 255, 255);
+  border-color: white;
+  border-width: 0.7px;
+  border-radius: 4px;
+  margin-top: 2%;
+  background-color: rgba(240, 248, 255, 0.051);
+  margin-right: 1%;
+  font-size: 25px;
+  box-sizing: border-box;
+}
+.subbut{
+  width: 230px;
+  padding: 1.5%;
+  padding-left: 3%;
+  padding-right: 3%;
+  border-style: none;
+  border-radius: 5%;
+  margin-top: 2%;
+  background-color: rgb(228, 16, 16);
+  color: white;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+  text-align: center;
+}
+.hr1{
+  border: 5px solid grey;
+  margin-top: 250px;
+  margin-bottom: 0%;
+}
+.home1{
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+}
+.home1 .left{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-basis: 59%;
+  height: 600px;
+  color: rgb(232, 28, 28);
+  text-align: left;
+}
+.home1 .left h1{
+  font-family: 'Bebas Neue', sans-serif;
+  margin: 0%;
+  font-size: 53px;
+}
+.home1 .left h3{
+  font-family: 'Ysabeau Infant', sans-serif;
+  margin: 3%;
+  font-size: 25px;
+  font-weight: 90;
+  margin-left: 26%;
+  text-align: left;
+}
+.home1 .right{
+  display:flex;
+  margin-top: -21%;
+  flex-basis: 41%;
+  height: 300px;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+.home1 .right .images{
+  max-width: 100%;
+  max-height: 100%;
+  top: 50%;
+  left: 0%;
+  position: absolute;
+  width: 550px;
+  height: 9990px;
+}
+.hr2{
+  border: 5px solid grey;
+  margin-bottom: 0%;
+  margin-top: 0%;
+}
+.home2{
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  height: 600px;
+}
+.home2 .left{
+  flex-basis: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+.home2 .left img{
+  max-width: 100%;
+  max-height: 100%;
+  width: 500px;
+  height: 570px;
+}
+.home2 .right{
+  display: flex;
+  flex-direction: column;
+  flex-basis: 50%;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: left;
+}
+.home2 .right h1{
+  font-family: 'Bebas Neue', sans-serif;
+  margin: 0%;
+  font-size: 53px;
+}
+.home2 .right h3{
+  font-family: 'Ysabeau Infant', sans-serif;
+  margin-top: 3%;
+  font-size: 25px;
+  font-weight: 90;
+  margin-right: 26%;
+  text-align: left;
+}
+.hr3{
+  border: 5px solid grey;
+  margin-bottom: 0%;
+  margin-top: 0%;
+}
+.home3{
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+}
+.home3 .left{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10%;
+  flex-direction: column;
+  flex-basis: 49%;
+  color: rgb(232, 28, 28);
+  text-align: left;
+}
+.home3 .left h1{
+  font-family: 'Bebas Neue', sans-serif;
+  margin: 0%;
+  font-size: 53px;
+}
+.home3 .left h3{
+  font-family: 'Ysabeau Infant', sans-serif;
+  margin-top: 3%;
+  font-size: 25px;
+  font-weight: 90;
+  margin-left: 19%;
+}
+.home3 .right{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 51%;
+  height: 300px;
+  position: relative;
+}
+.home3 .right .images{
+  top: 3%;
+  left: 0%;
+  position: absolute;
+}
+.home3 .right .down{
+  width: 700px;
+  height: 500px;
+}
+.hr4{
+  border: 5px solid grey;
+  margin-bottom: 0%;
+  margin-top: 18%;
+}
+.home4{
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+  background-color: black;
+}
+.home4 .left{
+  display: flex;
+  flex-basis: 50%;
+  justify-content: center;
+  align-items: center;
+}
+.home4 .left img{
+  width: 500px;
+  height: 550px;
+}
+.home4 .right{
+  display: flex;
+  flex-direction: column;
+  flex-basis: 50%;
+  justify-content: center;
+  text-align: center;
+  margin-top: 0%;
+  text-align: left;
+  color: white;
+}
+.home4 .right h1{
+  font-family: 'Bebas Neue', sans-serif;
+  margin: 0%;
+  font-size: 53px;
+  text-align: left;
+}
+.home4 .right h3{
+  font-family: 'Ysabeau Infant', sans-serif;
+  margin-top: 3%;
+  font-size: 25px;
+  font-weight: 90;
+  margin-right: 26%;
+  text-align: left;
+}
+.hr5{
+  border: 5px solid grey;
+  margin-bottom: 0%;
+  margin-top: 0%;
+}
+.footer{
+  height: 400px;
+}
+.footer .fir{
+  font-family: 'Ysabeau Office', sans-serif;
+  color: black;
+  margin-left: 5.5%;
+  margin-top: 5%;
+}
+.footer .mid{
+  display: flex;
+  flex: 1;
+  margin-top: -1%;
+  margin-left: 3%;
+}
+.footer .mid .left{
+  flex-basis: 33%;
+  margin-top: -1%;
+}
+.footer .mid .left ul{
+  text-align: left;
+}
+.footer .mid .left li{
+  list-style-type: none;
+  border-style: none;
+  margin-bottom: 0.7%;
+}
+.footer .mid .left a{
+  margin: 0%;
+  color: black;
+  font-size: 15px;
+}
+.footer .mid .middle{
+  flex-basis: 33%;
+  margin: 0%;
+}
+.footer .mid .middle ul{
+  text-align: left;
+}
+.footer .mid .middle li{
+  list-style-type: none;
+  border-style: none;
+}
+.footer .mid .middle a{
+  color: black;
+  font-size: 15px;
+}
+.footer .mid .right{
+  flex-basis: 33%;
+  margin: 0%;
+}
+.footer .mid .right ul{
+  text-align: left;
+}
+.footer .mid .right li{
+  list-style-type: none;
+  border-style: none;
+}
+.footer .mid .right a{
+  color: black;
+  font-size: 15px;
+}
+.end{
+  margin-left: 5.7%;
+}
+.end1 select{
+  border-color: rgb(0, 0, 0);
+  border-width: 1px;
+  color: rgb(0, 0, 0);
+  border-radius: 9%;
+  padding: 7px;
+  padding-left: 18px;
+  padding-right: 18px;
+  font-size: 15px;
+  font-weight: 600;
+  background-color: rgba(240, 248, 255, 0.066);
+}
+.end2{
+  color: black;
+  font-family: 'Ysabeau Office', sans-serif;
 }
