@@ -2,18 +2,18 @@ var express = require('express');
 var router = express.Router();
 const userModel = require("./users");
 const passport = require("passport");
-const localStrategy = require("passport-local");
-passport.use(new localStrategy(userModel.authenticate()));
+const LocalStrategy = require("passport-local");
+//passport.use(new LocalStrategy(userModel.authenticate()));
+passport.use(userModel.createStrategy());
 
 router.get("/", function(req, res, next){
   res.render("index");
 });
 
-router.post('/', async function(req, res, next) {
-  
+router.post('/', async function(req, res, err) {
+  if(err) {res.render("error");}
   const email = req.body.landemail;
   if(email){
-  console.log("Landing page confirmed");
   const existinguser = await userModel.findOne({email: email});
   if(existinguser)
   {
@@ -24,28 +24,21 @@ router.post('/', async function(req, res, next) {
     res.redirect(`/register?email=${encodeURIComponent(email)}`);
   }
   }
-else{
-  console.log("Else block before render");
-  res.render("index");
-  console.log("Else block after render");
-}
 });
 
-router.get("/login", function(req, res, next){
+router.get("/login", function(req, res){
   const emailValue = req.query.email;
   res.render("login_page", {email: emailValue || ""});
 });
 
-router.post("/login", passport.authenticate("local", {
-  successRedirect: "/profile",
-  failureRedirect: "/login"
-})//,function(req, res, next) {
-  //console.log("Inside login function");
-  //res.redirect("/profile");
- );
+router.post("/login", 
+passport.authenticate("local", {successRedirect: "/profile",failureRedirect: "/login"}),
+ function(req, res, next) {
+  
+});
 
 
-router.get("/register", function(req, res, next) {
+router.get("/register", function(req, res) {
   const emailValue = req.query.email;
   res.render("register_page", {email: emailValue || ""});
   
@@ -61,15 +54,31 @@ router.post("/register", function(req, res, next) {
     email: req.body.email
   });
   userModel.register(userdata, req.body.password)
-.then(function(registereduser) {
+.then(function() {
+  passport.authenticate("local")(req, res, function () {
     res.redirect("/profile");
+  })
 
 });
 
 });
 
-router.get("/profile", function(req, res){
-  res.send("profile");
+
+router.get("/profile", isLoggedIn ,async function(req, res){
+  res.send(req.user);
 });
+
+router.get("/logout", function (req, res, next){
+  req.logout(function(err){
+    if(err) {return next(err);}
+    res.redirect("/login");
+  });
+});
+
+function isLoggedIn (req, res, next) {
+  if(req.isAuthenticated()) {return next();}
+  else {
+  res.redirect("/login");}
+}
 
 module.exports = router;

@@ -13,5 +13,5 @@ const user_schema = mongoose.Schema ({
   password: String
 })
 
-user_schema.plugin(plm, {usernameField: "email"});
+user_schema.plugin(plm, {usernameField : "email"});
 module.exports = mongoose.model("user",user_schema);

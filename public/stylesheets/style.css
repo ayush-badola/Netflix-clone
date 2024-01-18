@@ -87,6 +87,9 @@ body{
   justify-content: center;
   align-items: center;
 }
+.emai:focus{
+  outline: none;
+}
 .emai-input{
   padding-left: 2vh;
   width: 430px;
@@ -102,6 +105,9 @@ body{
   margin-right: 1%;
   font-size: 25px;
   box-sizing: border-box;
+}
+.emai-input:focus{
+  outline: none;
 }
 .subbut{
   width: 230px;

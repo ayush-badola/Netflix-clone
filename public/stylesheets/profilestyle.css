@@ -1,0 +1,6 @@
+body{
+    background-color: rgba(39, 37, 37, 0.895);
+}
+.header li{
+    display: inline-block;
+}

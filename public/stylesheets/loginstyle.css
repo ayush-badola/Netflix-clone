@@ -44,6 +44,10 @@ body{
     text-align: center;
 }
 
+.emai:focus{
+    outline: none;
+}
+
 .pass{
     width: 47vh;
     height: 6vh;
@@ -55,6 +59,10 @@ body{
     text-align: center;
 }
 
+.pass:focus{
+    outline: none;
+}
+
 .sub{
     width: 47vh;
     height: 6vh;
@@ -63,6 +71,10 @@ body{
     background-color: red;
     color: white;
     font-size: 2.5vh;
+}
+
+.sub:hover{
+    cursor:pointer;
 }
 
 .reg{

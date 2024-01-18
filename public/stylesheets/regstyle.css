@@ -44,6 +44,10 @@ body{
     margin-top: -2vh;
 }
 
+.emai:focus{
+    outline: none;
+}
+
 .nam{
     width: 47vh;
     height: 6vh;
@@ -54,6 +58,10 @@ body{
     font-size: 2.5vh;
     padding-left: 2vh;
     margin-top: -2vh;
+}
+
+.nam:focus{
+    outline: none;
 }
 
 .user{
@@ -68,6 +76,10 @@ body{
     margin-top: -2vh;
 }
 
+.user:focus{
+    outline: none;
+}
+
 .mob{
     overflow: hidden;
     width: 47vh;
@@ -80,6 +92,10 @@ body{
     padding-left: 2vh;
     margin-top: -2vh;
     overflow: hidden;
+}
+
+.mob:focus{
+    outline: none;
 }
 
 .mob::-webkit-inner-spin-button,::-webkit-outer-spin-button{
@@ -98,6 +114,10 @@ body{
     margin-top: -2vh;
 }
 
+.pass:focus{
+    outline: none;
+}
+
 .sub{
     width: 47vh;
     height: 6vh;
@@ -106,6 +126,10 @@ body{
     background-color: red;
     color: white;
     font-size: 2.5vh;
+}
+
+.sub:hover{
+    cursor: pointer;
 }
 
 .reg{

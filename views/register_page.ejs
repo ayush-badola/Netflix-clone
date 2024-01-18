@@ -11,23 +11,23 @@
     <h3>Sign Up</h3>
     <form action="/register" method="post">
       <h4>Full Name</h4>
-      <input type="text" name="name" placeholder="Full Name" class="nam">
+      <input type="text" name="name" placeholder="Full Name" class="nam" required>
       <br>
       <br>
       <h4>Username</h4>
-      <input type="text" name="username" placeholder="Username" class="user">
+      <input type="text" name="username" placeholder="Username" class="user" required>
       <br>
       <br>
       <h4>Email Address</h4>
-      <input type="email" placeholder="Email Address" name="email" value="<%= email%>" class="emai">
+      <input type="email" placeholder="Email Address" name="email" value="<%= email%>" class="emai" required>
       <br>
       <br>
       <h4>Mobile Number</h4>
-      <input type="number" name="mobile" placeholder="Mobile Number" class="mob" maxlength="10">
+      <input type="number" name="mobile" placeholder="Mobile Number" class="mob" maxlength="10" required minlength="7" maxlength="10">
       <br>
       <br>
       <h4>Password</h4>
-      <input type="password" placeholder="password" name="password" class="pass">
+      <input type="password" placeholder="password" name="password" class="pass" required>
       <br>
       <br>
       <br>
