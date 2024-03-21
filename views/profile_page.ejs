@@ -4,9 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/stylesheets/profilestyle.css">
-    <title>Document</title>
+    <title>Netflix</title>
 </head>
 <body>
-    <h1><%= user%></h1>
+    <div id="page">
+    <div class="nav">
+        <div class="logo"><h2>NETFLIX</h2></div>
+        <div class="imgs" id="imgs" ></div>
+        <div class="usr" id="protex"><h3 name="name"><%= name%></h3>
+        <h4 name="username"><%= username%></h4></div>
+    </div>
+    <div class="land">
+        <div class="leftbar">
+            <div class="leftbarhead">
+                <h2>PROFILE</h2>
+                <h2>FEED</h2>
+                <h2>UPLOAD</h2>
+            </div>
+        </div>
+        <div class="main">
+            <div class="picpro"></div>
+        </div>
+        <div class="rightinfo">
+
+            <div class="rightinfogrp">
+                <label for="name">Name :</label>
+                <input type="text" id="name" name="name" value=<%= name%> readonly>
+            </div>
+
+            <div class="rightinfogrp">
+                <label for="username">Username :</label>
+                <input type="text" id="username" name="username" value=<%= username%> readonly>
+            </div>
+            <div class="rightinfogrp">
+                <label for="phone">Phone Number :</label>
+                <input type="number" id="phone" name="phone" value=<%= phone%> readonly>
+            </div>
+
+            <div class="rightinfogrp">
+                <label for="email">Email Address :</label>
+                <input type="email" id="email" name="email" value=<%= email%> readonly>
+            </div>
+
+        </div>
+    </div>
+    </div>
+    <div class="sidebar" id="sidebar1">
+        <div class="pic"></div>
+        <form id="dypi" action="/upload" hidden>
+            <input name="picchng" type="file" id="uploadpic">
+        </form>
+        <div class="btn" id="butto"></div>
+        <h3 name="name"><%= name%></h3>
+        <h4 name="username"><%= username%></h4>
+        <a href="" class="fee">Feed</a>
+        <div class="lout">
+            <a href="" class="sig">Sign Out</a>
+        </div>
+            <a href="" class="sidbot">Visit the original Netflix Website</a>
+    </div>
+    <script src="/javascripts/profile.js"></script>
 </body>
 </html>

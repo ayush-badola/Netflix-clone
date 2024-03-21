@@ -10,7 +10,8 @@ const user_schema = mongoose.Schema ({
   username: String,
   email : String,
   number: Number,
-  password: String
+  password: String,
+  profile: String
 })
 
 user_schema.plugin(plm, {usernameField : "email"});

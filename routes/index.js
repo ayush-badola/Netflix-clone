@@ -11,7 +11,6 @@ router.get("/", function(req, res, next){
 });
 
 router.post('/', async function(req, res, err) {
-  if(err) {res.render("error");}
   const email = req.body.landemail;
   if(email){
   const existinguser = await userModel.findOne({email: email});
@@ -45,13 +44,18 @@ router.get("/register", function(req, res) {
 });
 
 
-router.post("/register", function(req, res, next) {
+router.post("/register", async function(req, res, next) {
   const emailValue = req.query.email;
+  const name = (req.body.name).charAt(0).toUpperCase()+(req.body.name).slice(1);
+  const email = req.body.email;
+  const exist = await userModel.findOne({email: email});
+  if(!exist){
   const userdata = new userModel({
-    name: req.body.name,
+    name: name,
     username: req.body.username,
     number: req.body.mobile,
-    email: req.body.email
+    email: req.body.email,
+    profile: "/public/images/default.png"
   });
   userModel.register(userdata, req.body.password)
 .then(function() {
@@ -60,12 +64,18 @@ router.post("/register", function(req, res, next) {
   })
 
 });
-
+  }
+  else{
+    res.redirect("/login");
+  }
 });
 
 
 router.get("/profile", isLoggedIn ,async function(req, res){
-  res.send(req.user);
+  const name = req.user.name;
+  const username = req.user.username;
+  res.render("profile_page",{name: name, username: username, phone: req.user.number, email: req.user.email} );
+  userdata = {profile: req.body.picchng};
 });
 
 router.get("/logout", function (req, res, next){
