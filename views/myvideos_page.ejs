@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/myvid.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="nav">
+        <div class="logo">
+            <a href="/">NETFLIX</a>
+        </div>
+        <div class="imgs" id="imgs" >
+            <img class="imgs" src="<%= profile%>" alt="#">
+        </div>
+        <div class="usr" id="protex"><h3 name="name"><%= name%></h3>
+        <h4 name="username"><%= username%></h4></div>
+    </div>
+
+    <div class="land">
+        <div class="leftbar">
+            <div class="leftbarhead">
+                <h2>PROFILE</h2>
+                <h2>FEED</h2>
+                <h2 class="profilepag">MY VIDEOS</h2>
+            </div>
+        </div>
+
+        
+    </div>
+
+    <div class="sidebar" id="sidebar1">
+        <div class="pic">
+            <img class="pic" src="<%= profile%>" alt="">
+        </div>
+        <form id="dypi" action="/upload" method="post" enctype="multipart/form-data" hidden>
+            <input name="picchng" type="file" id="uploadpic">
+            <button type="submit">Upload</button>
+        </form>
+        <div class="btn" id="butto"></div>
+        <h3 name="name"><%= name%></h3>
+        <h4 name="username"><%= username%></h4>
+        <a href="" class="fee">Feed</a>
+        <div class="lout">
+            <a href="" class="sig">Sign Out</a>
+        </div>
+            <a href="" class="sidbot">Visit the original Netflix Website</a>
+    </div>
+<script src="/javascripts/myvid.js" ></script>
+</body>
+</html>

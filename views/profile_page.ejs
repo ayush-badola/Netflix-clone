@@ -9,21 +9,27 @@
 <body>
     <div id="page">
     <div class="nav">
-        <div class="logo"><h2>NETFLIX</h2></div>
-        <div class="imgs" id="imgs" ></div>
+        <div class="logo">
+            <a href="/">NETFLIX</a>
+        </div>
+        <div class="imgs" id="imgs" >
+            <img class="imgs" src="<%= profile%>" alt="#">
+        </div>
         <div class="usr" id="protex"><h3 name="name"><%= name%></h3>
         <h4 name="username"><%= username%></h4></div>
     </div>
     <div class="land">
         <div class="leftbar">
             <div class="leftbarhead">
-                <h2>PROFILE</h2>
+                <h2 class="profilepag">PROFILE</h2>
                 <h2>FEED</h2>
-                <h2>UPLOAD</h2>
+                <h2>MY VIDEOS</h2>
             </div>
         </div>
         <div class="main">
-            <div class="picpro"></div>
+            <div class="picpro">
+                <img class="picpro" src="<%= profile%>" alt="#">
+            </div>
         </div>
         <div class="rightinfo">
 
@@ -36,6 +42,7 @@
                 <label for="username">Username :</label>
                 <input type="text" id="username" name="username" value=<%= username%> readonly>
             </div>
+
             <div class="rightinfogrp">
                 <label for="phone">Phone Number :</label>
                 <input type="number" id="phone" name="phone" value=<%= phone%> readonly>
@@ -50,9 +57,12 @@
     </div>
     </div>
     <div class="sidebar" id="sidebar1">
-        <div class="pic"></div>
-        <form id="dypi" action="/upload" hidden>
+        <div class="pic">
+            <img class="pic" src="<%= profile%>" alt="">
+        </div>
+        <form id="dypi" action="/upload" method="post" enctype="multipart/form-data" hidden>
             <input name="picchng" type="file" id="uploadpic">
+            <button type="submit">Upload</button>
         </form>
         <div class="btn" id="butto"></div>
         <h3 name="name"><%= name%></h3>

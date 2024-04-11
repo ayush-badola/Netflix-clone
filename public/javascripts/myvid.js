@@ -1,20 +1,12 @@
+var body = document.getElementById("page");
+var sidepic = document.getElementById("pic");
 var imgs = document.getElementById("imgs");
 var text = document.getElementById("protex");
 var sidebar = document.getElementById("sidebar1");
 var sideopen = false;
-var dynamicpic = document.getElementById("butto");
-var picuploadinput = document.getElementById("uploadpic");
-var picform = document.getElementById("dypi");
-var body = document.getElementById("page");
-var sidepic = document.getElementById("pic");
 
-dynamicpic.addEventListener("click", function(){
-    picuploadinput.click();
-});
 
-picuploadinput.addEventListener("change", function (){
-    picform.submit();
-});
+
 
 (imgs).addEventListener("click", function(event){
     event.stopPropagation();
