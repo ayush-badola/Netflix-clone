@@ -14,7 +14,7 @@ This is a Netflix inspired website where user holds the content.
 ### To clone the project from git hub 	:octocat:
 1. Open any command line and change the directory to the folder where you want to set up the code
 2. Copy and paste the following code in the command line :
-	`https://github.com/ayush-badola/Netflix-clone.git`
+	`git clone https://github.com/ayush-badola/Netflix-clone.git`
 3. To open the current folder where the code is setted up, type the following line :
 	`code .`
 ### To install all the node packages/dependencies :arrow_down:
